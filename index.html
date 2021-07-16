@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <main>
+            <div class="search-container">
+                <div class="search-box-wrapper">
+                    <div class="search-box">
+                        <input type="search" placeholder="Find Your City">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="24" height="24"
+                        viewBox="0 0 172 172"
+                        style=" fill:#000000;"><g transform="translate(4.988,4.988) scale(0.942,0.942)"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="none" stroke-linecap="butt" stroke-linejoin="none" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g fill="#000000" stroke="#ffffff" stroke-width="10" stroke-linejoin="round" opacity="true"><path d="M114.66667,64.5c0,12.52732 -4.67249,23.97256 -12.31771,32.7819l3.05143,3.05143h9.26628l43,43l-14.33333,14.33333l-43,-43v-9.26628l-3.05143,-3.05143c-8.80934,7.64521 -20.25458,12.31771 -32.7819,12.31771c-27.6214,0 -50.16667,-22.54527 -50.16667,-50.16667c0,-27.6214 22.54527,-50.16667 50.16667,-50.16667c27.6214,0 50.16667,22.54527 50.16667,50.16667zM28.66667,64.5c0,19.87509 15.95824,35.83333 35.83333,35.83333c19.87509,0 35.83333,-15.95825 35.83333,-35.83333c0,-19.87509 -15.95825,-35.83333 -35.83333,-35.83333c-19.87509,0 -35.83333,15.95824 -35.83333,35.83333z"></path></g><path d="M0,172v-172h172v172z" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path><g id="original-icon" fill="#ffffff" stroke="none" stroke-width="1" stroke-linejoin="miter"><path d="M64.5,14.33333c-27.6214,0 -50.16667,22.54527 -50.16667,50.16667c0,27.6214 22.54527,50.16667 50.16667,50.16667c12.52732,0 23.97256,-4.67249 32.7819,-12.31771l3.05143,3.05143v9.26628l43,43l14.33333,-14.33333l-43,-43h-9.26628l-3.05143,-3.05143c7.64521,-8.80934 12.31771,-20.25458 12.31771,-32.7819c0,-27.6214 -22.54527,-50.16667 -50.16667,-50.16667zM64.5,28.66667c19.87509,0 35.83333,15.95824 35.83333,35.83333c0,19.87509 -15.95825,35.83333 -35.83333,35.83333c-19.87509,0 -35.83333,-15.95825 -35.83333,-35.83333c0,-19.87509 15.95824,-35.83333 35.83333,-35.83333z"></path></g><path d="" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path><path d="" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path><path d="" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path><path d="" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path></g></g></svg>
+                    </div>
+                </div>
+                <div class="temp-units">
+                    <button class="temp-select" style="color:lightblue">Celcius</button>
+                    <button class="temp-select">Farenheit</button>
+                </div>
+            </div>
+
+            <div class="current-weather-wrapper">
+
+                <div class="current-weather">
+                    <div class="current-city">
+                        New York, NY 
+                    </div>
+                    <div class="current-description">
+                        Mostly Cloudy 
+                    </div>
+                    <div class="current-icon">
+                        <i class="wi wi-day-cloudy current-icon"></i>
+                    </div>
+                    <div class="current-temp">
+                        71&deg; F
+                    </div>
+                    <div class="current-date-time">
+                        <p class="date">Wed. July 14th, 2021</p>
+                        <p class="time">7:31pm EST</p>
+                    </div>
+                </div>
+                
+                <div class="current-weather-details">
+                    <div class="weather-details">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-thermometer"></i>
+                        </div>
+                        <div class="weather-detail-info">
+                            <div class="details-label">Feels Like</div>
+                            <div class="details-data">84&deg; F</div>
+                        </div> 
+                    </div>
+                    <div class="weather-details">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-humidity"></i>
+                        </div>
+                        <div class="weather-detail-info">
+                            <div class="details-label">Humidity</div>
+                            <div class="details-data">25%</div>
+                        </div> 
+                    </div>
+                    <div class="weather-details">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-rain"></i>
+                        </div>
+                        <div class="weather-detail-info">
+                            <div class="details-label">Chance of Precip</div>
+                            <div class="details-data">10%</div>
+                        </div> 
+                    </div>
+                    <div class="weather-details">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-strong-wind"></i>
+                        </div>
+                        <div class="weather-detail-info">
+                            <div class="details-label">Wind Speed</div>
+                            <div class="details-data">5mph</div>
+                        </div> 
+                    </div>
+                </div>
+                    
+            </div>
+        </main>
+
+        <div class="forecast">
+            <div class="forecast-day">
+                <div class="day">   
+                    Monday
+                </div>
+                <div class="high">
+                    85&deg; F
+                </div>
+                <div class="low">
+                    75&deg; F
+                </div>
+                <div class="forecast-icon">
+                    <i class="wi wi-rain"></i>
+                </div>
+            </div>
+            <div class="forecast-day">
+                <div class="day">   
+                    Monday
+                </div>
+                <div class="high">
+                    85&deg; F
+                </div>
+                <div class="low">
+                    75&deg; F
+                </div>
+                <div class="forecast-icon">
+                    <i class="wi wi-rain"></i>
+                </div>
+            </div>
+            <div class="forecast-day">
+                <div class="day">   
+                    Monday
+                </div>
+                <div class="high">
+                    85&deg; F
+                </div>
+                <div class="low">
+                    75&deg; F
+                </div>
+                <div class="forecast-icon">
+                    <i class="wi wi-rain"></i>
+                </div>
+            </div>
+            <div class="forecast-day">
+                <div class="day">   
+                    Monday
+                </div>
+                <div class="high">
+                    85&deg; F
+                </div>
+                <div class="low">
+                    75&deg; F
+                </div>
+                <div class="forecast-icon">
+                    <i class="wi wi-rain"></i>
+                </div>
+            </div>
+            <div class="forecast-day">
+                <div class="day">   
+                    Monday
+                </div>
+                <div class="high">
+                    85&deg; F
+                </div>
+                <div class="low">
+                    75&deg; F
+                </div>
+                <div class="forecast-icon">
+                    <i class="wi wi-rain"></i>
+                </div>
+            </div>
+            <div class="forecast-day">
+                <div class="day">   
+                    Monday
+                </div>
+                <div class="high">
+                    85&deg; F
+                </div>
+                <div class="low">
+                    75&deg; F
+                </div>
+                <div class="forecast-icon">
+                    <i class="wi wi-rain"></i>
+                </div>
+            </div>
+            <div class="forecast-day">
+                <div class="day">   
+                    Monday
+                </div>
+                <div class="high">
+                    85&deg; F
+                </div>
+                <div class="low">
+                    75&deg; F
+                </div>
+                <div class="forecast-icon">
+                    <i class="wi wi-rain"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
