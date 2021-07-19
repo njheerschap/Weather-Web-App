@@ -3,7 +3,9 @@
 }
 
 html { 
-    background: url(../images/weather-sm.jpg) no-repeat center center fixed; 
+    background: url(../images/northern-lights.jpg) no-repeat center center fixed; 
+    background-color: grey;
+    background-blend-mode: multiply;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -96,6 +98,7 @@ input[type="search"]::placeholder {
 .current-description {
     font-size: 1.5rem;
     margin-top: 15px;
+    text-transform: capitalize;
 }
 
 .current-icon {
@@ -190,16 +193,14 @@ input[type="search"]::placeholder {
     margin: auto;
 }
 
+.attribution {
+    font-size: 0.75rem;
+    padding-top: 25px;
+    text-align: center;
+}
+
 
 @media (min-width: 768px) {
-
-    html { 
-        background: url(../images/weather.jpg) no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
 
       main {
           margin-bottom: 0;
