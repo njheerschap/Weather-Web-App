@@ -18,16 +18,15 @@
             <div class="search-container">
                 <div class="search-box-wrapper">
                     <div class="search-box">
-                        <input type="search" placeholder="Find Your City" id="search-field">
+                        <input type="search" placeholder="Type City Name" id="search-field">
                         <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         width="24" height="24"
                         viewBox="0 0 172 172"
                         style=" fill:#000000;"><g transform="translate(4.988,4.988) scale(0.942,0.942)"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="none" stroke-linecap="butt" stroke-linejoin="none" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g fill="#000000" stroke="#ffffff" stroke-width="10" stroke-linejoin="round" opacity="true"><path d="M114.66667,64.5c0,12.52732 -4.67249,23.97256 -12.31771,32.7819l3.05143,3.05143h9.26628l43,43l-14.33333,14.33333l-43,-43v-9.26628l-3.05143,-3.05143c-8.80934,7.64521 -20.25458,12.31771 -32.7819,12.31771c-27.6214,0 -50.16667,-22.54527 -50.16667,-50.16667c0,-27.6214 22.54527,-50.16667 50.16667,-50.16667c27.6214,0 50.16667,22.54527 50.16667,50.16667zM28.66667,64.5c0,19.87509 15.95824,35.83333 35.83333,35.83333c19.87509,0 35.83333,-15.95825 35.83333,-35.83333c0,-19.87509 -15.95825,-35.83333 -35.83333,-35.83333c-19.87509,0 -35.83333,15.95824 -35.83333,35.83333z"></path></g><path d="M0,172v-172h172v172z" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path><g id="original-icon" fill="#ffffff" stroke="none" stroke-width="1" stroke-linejoin="miter"><path d="M64.5,14.33333c-27.6214,0 -50.16667,22.54527 -50.16667,50.16667c0,27.6214 22.54527,50.16667 50.16667,50.16667c12.52732,0 23.97256,-4.67249 32.7819,-12.31771l3.05143,3.05143v9.26628l43,43l14.33333,-14.33333l-43,-43h-9.26628l-3.05143,-3.05143c7.64521,-8.80934 12.31771,-20.25458 12.31771,-32.7819c0,-27.6214 -22.54527,-50.16667 -50.16667,-50.16667zM64.5,28.66667c19.87509,0 35.83333,15.95824 35.83333,35.83333c0,19.87509 -15.95825,35.83333 -35.83333,35.83333c-19.87509,0 -35.83333,-15.95825 -35.83333,-35.83333c0,-19.87509 15.95824,-35.83333 35.83333,-35.83333z"></path></g><path d="" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path><path d="" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path><path d="" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path><path d="" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path></g></g></svg>
                     </div>
                 </div>
-                <div class="temp-units">
-                    <button class="temp-select" style="color:lightblue">Celcius</button>
-                    <button class="temp-select">Farenheit</button>
+                <div class="error-div" id="error-message">
+                    <p class="error">*Please enter a valid city</p>
                 </div>
             </div>
 
@@ -70,7 +69,7 @@
                     
                 </div>
                 <div class="forecast-icon">
-                    <i class="wi wi-rain"></i>
+                    <i class="wi" id="forecast-icon-display"></i>
                 </div>
             </div>
             <div class="forecast-day">
@@ -83,7 +82,7 @@
                     
                 </div>
                 <div class="forecast-icon">
-                    <i class="wi wi-rain"></i>
+                    <i class="wi" id="forecast-icon-display"></i>
                 </div>
             </div>
             <div class="forecast-day">
@@ -96,7 +95,7 @@
                     
                 </div>
                 <div class="forecast-icon">
-                    <i class="wi wi-rain"></i>
+                    <i class="wi" id="forecast-icon-display"></i>
                 </div>
             </div>
             <div class="forecast-day">
@@ -109,7 +108,7 @@
                     
                 </div>
                 <div class="forecast-icon">
-                    <i class="wi wi-rain"></i>
+                    <i class="wi" id="forecast-icon-display"></i>
                 </div>
             </div>
             <div class="forecast-day">
@@ -122,7 +121,7 @@
                     
                 </div>
                 <div class="forecast-icon">
-                    <i class="wi wi-rain"></i>
+                    <i class="wi" id="forecast-icon-display"></i>
                 </div>
             </div>
             <div class="forecast-day">
@@ -135,7 +134,7 @@
                     
                 </div>
                 <div class="forecast-icon">
-                    <i class="wi wi-rain"></i>
+                    <i class="wi" id="forecast-icon-display"></i>
                 </div>
             </div>
             <div class="forecast-day">
@@ -148,7 +147,7 @@
                     
                 </div>
                 <div class="forecast-icon">
-                    <i class="wi wi-rain"></i>
+                    <i class="wi" id="forecast-icon-display"></i>
                 </div>
             </div>
 

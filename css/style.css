@@ -65,7 +65,6 @@ input[type="search"]::placeholder {
 
 .temp-units {
     text-align: center;
-    margin-right: 50px;
 }
 
 .temp-select {
@@ -74,6 +73,14 @@ input[type="search"]::placeholder {
     border: none;
     font-size: 1.25rem;
     padding: 7px;
+}
+
+.error-div {
+    width: 100%;
+}
+
+.error {
+    text-align: center;
 }
 
 /* Current Weather */
@@ -219,6 +226,10 @@ input[type="search"]::placeholder {
     .search-box {
         display: flex;
         width: 400px;
+    }
+
+    #search-icon {
+        cursor: pointer;
     }
 
     input[type="search"] {

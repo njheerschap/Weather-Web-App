@@ -1,4 +1,7 @@
 const searchBar = document.getElementById('search-field');
+const searchIcon = document.getElementById('search-icon');
+const errorMessage = document.getElementById('error-message');
+errorMessage.style.display = 'none';
 
 function generateCurrentWeatherHTML(oneCallData) {
     const weatherDescription = document.getElementById('description')
@@ -127,8 +130,8 @@ function showDays() {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     const today = daysOfWeek[day];
     const daysDiv = document.querySelectorAll('.day')
-    for (let i = day; i < 7; i++) {
-        daysDiv[i].innerText = daysOfWeek[i + 1]
+    for (let i = day; i < day + 7; i++) {
+        daysDiv[i - day].innerText = daysOfWeek[i + 1]
     }
 }
 
@@ -137,11 +140,33 @@ function sevenDayForecast(oneCallData) {
     const low = document.querySelectorAll('.low');
     const daily = oneCallData.daily;
     for (let i = 0; i < high.length; i++) {
-    console.log(daily[i].temp.max)
     high[i].innerText = Math.round(daily[i].temp.max)+'\xB0'+' F';
     low[i].innerText = Math.round(daily[i].temp.min)+'\xB0'+' F';
 
     }
+}
+
+function sevenDayIcon(oneCallData) {
+    const forecastIcon = document.querySelectorAll('#forecast-icon-display');
+    console.log(oneCallData.daily[0].weather[0].main)
+    for(let i = 0; i < forecastIcon.length; i++) {
+        const icon = oneCallData.daily[i].weather[0].main;
+        forecastIcon[i].classList = 'wi'
+        if(icon === 'Thunderstorm'){
+            forecastIcon[i].classList += ' wi-thunderstorm';
+        } else if(icon === 'Clouds') {
+            forecastIcon[i].classList += ' wi-cloudy';
+        } else if(icon === 'Drizzle' || icon === 'Rain') {
+            forecastIcon[i].classList += ' wi-rain';
+        } else if(icon === 'Snow') {
+            forecastIcon[i].classList += ' wi-snow';                  
+        } else if(icon === 'Clear') {
+            forecastIcon[i].classList += ' wi-day-sunny'; 
+        } else {
+            forecastIcon[i].classList += ' wi-alien';
+        }
+    }
+    
 }
 
 
@@ -156,6 +181,8 @@ function showWeather() {
             if(xhr.status === 200) {
                 let data = JSON.parse(xhr.response);
                 return callback(data);
+            } else {
+                errorMessage.style.display = 'block'
             }
         }
         xhr.send();
@@ -191,6 +218,7 @@ function showWeather() {
             generateCurrentWeatherHTML(oneCallData);
             getDetails(oneCallData);
             sevenDayForecast(oneCallData);
+            sevenDayIcon(oneCallData);
         }
 
         getWeatherInfo();
@@ -209,6 +237,16 @@ function cityHTML() {
 
 
 document.addEventListener('search', e => {
+    errorMessage.style.display = 'none'
+    cityHTML();
+    createLabels();
+    showDays();
+    showWeather();
+    searchBar.value = '';
+})
+
+searchIcon.addEventListener('click', e => {
+    errorMessage.style.display = 'none'
     cityHTML();
     createLabels();
     showDays();
